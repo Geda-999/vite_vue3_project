@@ -10,6 +10,15 @@ import Components from "unplugin-vue-components/vite";
 // element - plus;
 import { ElementPlusResolver } from "unplugin-vue-components/resolvers";
 
+// 这个插件可以让我们支持 jsx 写法
+// import vueJsx from "@vitejs/plugin-vue-jsx";
+
+import svgLoader from "vite-svg-loader";
+
+// 是一个非常优秀的图标库，里面集成了很多的图标
+import Icons from "unplugin-icons/vite";
+import IconsResolver from "unplugin-icons/resolver";
+
 // https://vitejs.dev/config/
 export default defineConfig({
 	// plugins: [vue()],
@@ -38,6 +47,7 @@ export default defineConfig({
 	},
 	plugins: [
 		vue(),
+		svgLoader(),
 		// ...
 		AutoImport({
 			dts: "./src/auto-imports.d.ts",
@@ -55,7 +65,11 @@ export default defineConfig({
 			dts: "./src/components.d.ts",
 			// imports 指定组件所在位置，默认为 src/components
 			dirs: ["src/components/"],
-			resolvers: [ElementPlusResolver()],
+			resolvers: [ElementPlusResolver(), IconsResolver()],
+		}),
+		Icons({
+			compiler: "vue3",
+			autoInstall: true,
 		}),
 	],
 	build: {

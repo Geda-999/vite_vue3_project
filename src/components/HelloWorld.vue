@@ -1,5 +1,6 @@
 <script setup>
 import { ref } from "vue";
+// import MyIcon from "@/assets/example.svg?component";
 
 defineProps({
 	msg: String,
@@ -10,6 +11,8 @@ const count = ref(0);
 
 <template>
 	<h1>{{ msg }}</h1>
+	<!-- <MyIcon /> -->
+	<i-mdi-account-reactivate style="font-size: 2em; color: red" />
 
 	<el-button>Default</el-button>
 	<el-button type="primary">Primary</el-button>

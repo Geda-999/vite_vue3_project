@@ -1,20 +1,24 @@
 {
-  "name": "vite_vue3_test",
-  "private": true,
-  "version": "0.0.0",
-  "scripts": {
-    "dev": "vite",
-    "build": "vite build",
-    "preview": "vite preview"
-  },
-  "dependencies": {
-    "element-plus": "^2.2.0",
-    "vue": "^3.2.25"
-  },
-  "devDependencies": {
-    "@vitejs/plugin-vue": "^2.3.3",
-    "unplugin-auto-import": "^0.7.2",
-    "unplugin-vue-components": "^0.19.5",
-    "vite": "^2.9.9"
-  }
+	"name": "vite_vue3_test",
+	"private": true,
+	"version": "0.0.0",
+	"scripts": {
+		"dev": "vite",
+		"build": "vite build",
+		"preview": "vite preview"
+	},
+	"dependencies": {
+		"element-plus": "^2.2.0",
+		"vue": "^3.2.25",
+		"vue-router": "4"
+	},
+	"devDependencies": {
+		"@iconify/json": "^2.1.45",
+		"@vitejs/plugin-vue": "^2.3.3",
+		"unplugin-auto-import": "^0.7.2",
+		"unplugin-icons": "^0.14.3",
+		"unplugin-vue-components": "^0.19.5",
+		"vite": "^2.9.9",
+		"vite-svg-loader": "^3.3.0"
+	}
 }
