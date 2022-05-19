@@ -93,4 +93,16 @@ export default defineConfig({
 			},
 		},
 	},
+	// 用来存放我们全局的 css 变量，我们先只配置一个主题色：
+	css: {
+		preprocessorOptions: {
+			scss: {
+				additionalData: `
+      @import "@/assets/styles/variables.scss";
+      @import "@/assets/styles/index.scss";
+    `,
+				javascriptEnabled: true,
+			},
+		},
+	},
 });
