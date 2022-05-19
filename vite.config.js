@@ -21,6 +21,9 @@ import IconsResolver from "unplugin-icons/resolver";
 
 import WindiCSS from "vite-plugin-windicss";
 
+// VueUse 是一个响应式的 Vue 实用程序的合集，使用它，我们可以把各种各样的东西变成响应式而不用我们手动编写 hook
+import { VueUseComponentsResolver } from "unplugin-vue-components/resolvers";
+
 // https://vitejs.dev/config/
 export default defineConfig({
 	// plugins: [vue()],
@@ -54,7 +57,7 @@ export default defineConfig({
 		// ...
 		AutoImport({
 			dts: "./src/auto-imports.d.ts",
-			imports: ["vue", "vue-router"], //, "pinia", "vue-router", "@vueuse/core"
+			imports: ["vue", "vue-router", "@vueuse/core"], //, "pinia", "vue-router", "@vueuse/core"
 			// Generate corresponding .eslintrc-auto-import.json file.
 			// eslint globals Docs - https://eslint.org/docs/user-guide/configuring/language-options#specifying-globals
 			eslintrc: {
@@ -68,7 +71,11 @@ export default defineConfig({
 			dts: "./src/components.d.ts",
 			// imports 指定组件所在位置，默认为 src/components
 			dirs: ["src/components/"],
-			resolvers: [ElementPlusResolver(), IconsResolver()],
+			resolvers: [
+				ElementPlusResolver(),
+				IconsResolver(),
+				VueUseComponentsResolver(),
+			],
 		}),
 		Icons({
 			compiler: "vue3",
