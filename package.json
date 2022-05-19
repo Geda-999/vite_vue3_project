@@ -23,6 +23,8 @@
 		"unplugin-icons": "^0.14.3",
 		"unplugin-vue-components": "^0.19.5",
 		"vite": "^2.9.9",
-		"vite-svg-loader": "^3.3.0"
+		"vite-plugin-windicss": "^1.8.4",
+		"vite-svg-loader": "^3.3.0",
+		"windicss": "^3.5.4"
 	}
 }

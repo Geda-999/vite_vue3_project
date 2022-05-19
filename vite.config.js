@@ -19,6 +19,8 @@ import svgLoader from "vite-svg-loader";
 import Icons from "unplugin-icons/vite";
 import IconsResolver from "unplugin-icons/resolver";
 
+import WindiCSS from "vite-plugin-windicss";
+
 // https://vitejs.dev/config/
 export default defineConfig({
 	// plugins: [vue()],
@@ -48,6 +50,7 @@ export default defineConfig({
 	plugins: [
 		vue(),
 		svgLoader(),
+		WindiCSS(),
 		// ...
 		AutoImport({
 			dts: "./src/auto-imports.d.ts",
