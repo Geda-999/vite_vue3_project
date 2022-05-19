@@ -32,7 +32,7 @@ export default defineConfig({
 	server: {
 		host: true, // host设置为true才可以使用network的形式，以ip访问项目
 		port: 8080, // 端口号
-		open: true, // 自动打开浏览器
+		open: false, // 自动打开浏览器
 		cors: true, // 跨域设置允许
 		strictPort: true, // 如果端口已占用直接退出
 		// 接口代理
@@ -51,7 +51,7 @@ export default defineConfig({
 		// ...
 		AutoImport({
 			dts: "./src/auto-imports.d.ts",
-			imports: ["vue"], //, "pinia", "vue-router", "@vueuse/core"
+			imports: ["vue", "vue-router"], //, "pinia", "vue-router", "@vueuse/core"
 			// Generate corresponding .eslintrc-auto-import.json file.
 			// eslint globals Docs - https://eslint.org/docs/user-guide/configuring/language-options#specifying-globals
 			eslintrc: {

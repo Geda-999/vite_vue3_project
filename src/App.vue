@@ -1,17 +1,16 @@
 <script setup>
-// This starter template is using Vue 3 <script setup> SFCs
-// Check out https://vuejs.org/api/sfc-script-setup.html#script-setup
-import HelloWorld from "@/components/HelloWorld.vue";
 import zhCn from "element-plus/lib/locale/lang/zh-cn";
 const locale = zhCn;
 </script>
 
 <template>
-	<img alt="Vue logo" src="@/assets/logo.png" />
-	<HelloWorld msg="Hello Vue 3 + Vite" />
-	<!-- <el-config-provider :locale="locale">
-    <router-view></router-view>
-  </el-config-provider> -->
+	<div id="app">
+		<div id="nav">
+			<router-link to="/">Home</router-link> |
+			<router-link to="/about">About</router-link>
+		</div>
+	</div>
+	<router-view></router-view>
 </template>
 
 <style>
@@ -22,5 +21,18 @@ const locale = zhCn;
 	text-align: center;
 	color: #2c3e50;
 	margin-top: 60px;
+}
+
+#nav {
+	padding: 30px;
+}
+
+#nav a {
+	font-weight: bold;
+	color: #2c3e50;
+}
+
+#nav a.router-link-exact-active {
+	color: #42b983;
 }
 </style>
