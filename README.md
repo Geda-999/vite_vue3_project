@@ -2,7 +2,7 @@
 
 
 
-> Vue 3 + Vite + elementPlus + scss + Icons
+> Vue 3 + Vite + elementPlus + scss + Icons + WindiCSS
 
 
 
